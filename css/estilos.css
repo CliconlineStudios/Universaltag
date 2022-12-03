@@ -136,34 +136,6 @@ lottie-player {
 	color: #ffffff;
 }
 
-/* ----- ----- informacion qr----- ----- */
-.informacion {
-	text-align: center;
-	display: none;
-
-}
-.informacion img {
-	width: 20%;
-}
-
-.informacion .titulo  {
-	text-align: center;
-	font-size: 18px;
-	padding: 5px;
-}
-
-
-.informacion .subtitulo {
-	color: #0028db;
-	font-size: 12px;
-	line-height: 18px;
-	margin-bottom: 16px;
-	text-align: center;
-}
-
-.informacion p {
-	font-size: 12px;
-}
 
 .back {
 	position: fixed;
@@ -261,21 +233,6 @@ lottie-player {
 	
 }
 
-.informacion .qr img {
-	text-align: center;
-	width: 30%;
-	vertical-align: top;
-	margin: 3px;	
-	border-radius: 8px;
-	box-shadow: 1px 1px 5px #020000c4;
-	border: solid 1px #ffffff;
-}
-.informacion .scan {
-      color: #080077;
-	  font-size: 12px;
-}
-
-
 
 /* ----- ----- screen1 ----- ----- */
 .screen1{
@@ -310,6 +267,105 @@ lottie-player {
 	color: #000000;
 
 }
+
+/* ----- ----- informacion qr----- ----- */
+.informacion {
+	text-align: center;
+	display: none;
+
+}
+.informacion img {
+	width: 20%;
+}
+
+.informacion .titulo  {
+	text-align: center;
+	font-size: 18px;
+	padding: 5px;
+}
+
+
+.informacion .subtitulo {
+	color: #0028db;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+.informacion p {
+	font-size: 12px;
+}
+
+.informacion .qr img {
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 3px;	
+	border-radius: 8px;
+	box-shadow: 1px 1px 5px #020000c4;
+	border: solid 1px #ffffff;
+}
+.informacion .scan {
+      color: #080077;
+	  font-size: 12px;
+}
+
+/* ----- ----- recargas----- ----- */
+
+.recarga {
+	text-align: center;
+	display: none;
+	background-color: #ffffffae;
+	border-radius: 20px;
+
+}
+
+.recarga img {
+	width: 10%;
+}
+.recarga p {
+	font-size: 12px;
+	text-align: left;
+	margin: 0px 10px;
+	font-weight: bold;
+}
+
+.recarga h5 {
+	margin: 5px 10px;
+	text-align: left;
+}
+
+
+.recarga .r {
+	color: #0028db;
+}
+
+.recarga .r:hover{
+	font-size: 13px;
+	color: #1bf807;
+}
+
+.recarga  .ratras {
+	text-decoration: none;
+	display:block;
+	background:  linear-gradient(102deg, #0998f7 40%, #0867ff8f 60%);
+	color: #ffffff;
+	margin: 15px 15%;
+	padding: 5px 5px;
+    border-radius:5px ;
+	font-size: 12px;
+	box-shadow: 1px 1px 5px #020000c4;
+	
+}
+
+.recarga  .ratras:hover{
+	background: #ffffff;
+	color: #115ae2;
+
+}
+
+
 /* ----- ----- Redes Sociales ----- ----- */
 
 

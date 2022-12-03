@@ -27,6 +27,7 @@ function backweb() {
         document.getElementById("side").style.display = "none";
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "block";
+        document.getElementById("recarga").style.display = "none";
         conta=0;
         contador=0;
         backarriba();
@@ -37,6 +38,7 @@ function backweb() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "block";
         document.getElementById("informacion").style.display = "none";
+        document.getElementById("recarga").style.display = "none";
         contador=0;;
         backarriba();
         
@@ -50,6 +52,7 @@ function back() {
         document.getElementById("informacion").style.display = "none";
         document.getElementById("side").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        document.getElementById("recarga").style.display = "none";
         document.getElementById("screen1").style.display = "block";
         conta=0;
         contador=0;
@@ -61,6 +64,7 @@ function back() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "block";
         document.getElementById("informacion").style.display = "none";
+        document.getElementById("recarga").style.display = "none";
         contador=0;
         backarriba();
 
@@ -68,7 +72,38 @@ function back() {
     }
 
 function inicio() {
-    document.getElementById("informacion").style.display = "block";	
+  
+    if (contador==1) {
+        document.getElementById("informacion").style.display = "none";	
+        document.getElementById("screen4").style.display = "none";
+        document.getElementById("screen1").style.display = "block";
+        document.getElementById("side").style.display = "none";
+        document.getElementById("recarga").style.display = "none";
+        conta=0;
+        contador=0;
+        ids1();
+
+    }
+    else if(contador==0){
+        document.getElementById("informacion").style.display = "block";	
+        document.getElementById("screen4").style.display = "none";
+        document.getElementById("screen1").style.display = "none";
+        document.getElementById("side").style.display = "none";
+        document.getElementById("recarga").style.display = "none";
+        conta=0;
+        contador=1;
+        ids1();
+
+    }
+    }
+
+
+
+
+
+function recarga() {
+    document.getElementById("recarga").style.display = "block";
+    document.getElementById("informacion").style.display = "none";	
     document.getElementById("screen4").style.display = "none";
     document.getElementById("screen1").style.display = "none";
     document.getElementById("side").style.display = "none";
@@ -76,7 +111,6 @@ function inicio() {
     contador=1;
     ids1();
 }
-
 
 
 
@@ -93,14 +127,6 @@ function portafolio() {
     backweb();
     contador=0;    
 }    
-
-function planes() {
-    document.getElementById("screen4").style.display = "block";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("informacion").style.display = "none";
-    conta=1;
-    contador=0;     
-}
 
 
    //    menu laterl 
