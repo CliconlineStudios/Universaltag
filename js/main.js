@@ -28,6 +28,7 @@ function backweb() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "block";
         document.getElementById("recarga").style.display = "none";
+        document.getElementById("activar").style.display = "none"
         conta=0;
         contador=0;
         backarriba();
@@ -39,6 +40,7 @@ function backweb() {
         document.getElementById("screen1").style.display = "block";
         document.getElementById("informacion").style.display = "none";
         document.getElementById("recarga").style.display = "none";
+        document.getElementById("activar").style.display = "none"
         contador=0;;
         backarriba();
         
@@ -54,6 +56,7 @@ function back() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("recarga").style.display = "none";
         document.getElementById("screen1").style.display = "block";
+        document.getElementById("activar").style.display = "none"
         conta=0;
         contador=0;
         backarriba();
@@ -65,44 +68,62 @@ function back() {
         document.getElementById("screen1").style.display = "block";
         document.getElementById("informacion").style.display = "none";
         document.getElementById("recarga").style.display = "none";
+        document.getElementById("activar").style.display = "none"
         contador=0;
         backarriba();
 
     }
     }
 
+    var coden = '0';
+
 function inicio() {
-  
-    if (contador==1) {
+   
+    if (coden==1) {
         document.getElementById("informacion").style.display = "none";	
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "block";
         document.getElementById("side").style.display = "none";
         document.getElementById("recarga").style.display = "none";
+        document.getElementById("activar").style.display = "none"
         conta=0;
         contador=0;
+        coden=0;
         ids1();
 
     }
-    else if(contador==0){
+    else if(coden==0){
         document.getElementById("informacion").style.display = "block";	
         document.getElementById("screen4").style.display = "none";
         document.getElementById("screen1").style.display = "none";
         document.getElementById("side").style.display = "none";
         document.getElementById("recarga").style.display = "none";
+        document.getElementById("activar").style.display = "none"
         conta=0;
         contador=1;
+        coden=1;
         ids1();
 
     }
     }
 
 
-
+function activar() {
+        document.getElementById("activar").style.display = "block";
+        document.getElementById("recarga").style.display = "none";
+        document.getElementById("informacion").style.display = "none";	
+        document.getElementById("screen4").style.display = "none";
+        document.getElementById("screen1").style.display = "none";
+        document.getElementById("side").style.display = "none";
+        conta=0;
+        contador=1;
+        ids1();
+    }
 
 
 function recarga() {
     document.getElementById("recarga").style.display = "block";
+    document.getElementById("activar").style.display = "none";
     document.getElementById("informacion").style.display = "none";	
     document.getElementById("screen4").style.display = "none";
     document.getElementById("screen1").style.display = "none";
@@ -122,6 +143,8 @@ var btn = document.getElementById("inicio"),
 function portafolio() {
     document.getElementById("screen1").style.display = "block";
     document.getElementById("side").style.display = "none";
+    document.getElementById("recarga").style.display = "none";
+    document.getElementById("activar").style.display = "none"
     document.getElementById("informacion").style.display = "none";
     conta=1;
     backweb();
@@ -278,6 +301,40 @@ function save(){
    
   };
 
+
+  //PDFDESCARGA>
+function pdf(){
+    let url = `https://drive.google.com/u/0/uc?id=11scS_e_AH5YWVI75iphmkCp5qkOtE5Fy&export=download`;
+    window.open(url); 
+   }
+  
+  function dpdf() {
+      Swal.fire({
+          title: 'UNIVERSAL TAG',
+          text: 'Catálogo PDF',
+          imageUrl: 'img/banner2.png',
+          imageWidth: 500,
+          confirmButtonText: 'Descargar',
+          showCloseButton: 'true',
+          showCancelButton: true,
+          footer: 'ECUA-LABELS'
+    
+      
+        }).then((result) => {
+          if (result.isConfirmed) {
+            pdf();
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Descarga Correcta',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
+        })
+  
+   
+  };
     
   // share tarjeta
 
