@@ -289,19 +289,6 @@ function save(){
   };
   
 
-  function sms() {
-    Swal.fire({
-    showCloseButton: true,
-    icon: 'info',
-    title: 'UNIVERSAL TAG',
-    text: 'Esta Información Estara Disponible Próximamente',
-    footer: 'ECUA-LABELS'
-    });
-  
-   
-  };
-
-
   //PDFDESCARGA>
 function pdf(){
     let url = `https://drive.google.com/u/0/uc?id=11scS_e_AH5YWVI75iphmkCp5qkOtE5Fy&export=download`;
@@ -362,6 +349,19 @@ const shareData2 = {
     
     
     
+    document.addEventListener('DOMContentLoaded', sms);
+
+    function sms (){
+        Swal.fire({
+            position: 'bottom',
+            icon: 'warning',
+            title: 'Advertencia',
+            text: 'Las Activaciones y Homologaciones son Gratuitas en los Puntos Y Páginas Autorizadas, no Realices Trámites en la Calle ni Recargas.',
+            showCloseButton: 'true',
+          footer: 'ECUA-LABELS'
+          })
+    
+    };
     
       
 
