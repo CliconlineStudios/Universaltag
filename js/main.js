@@ -1,4 +1,5 @@
 
+
 let ids = '';
 
 function ids1 () {
@@ -68,7 +69,7 @@ function back() {
         document.getElementById("screen1").style.display = "block";
         document.getElementById("informacion").style.display = "none";
         document.getElementById("recarga").style.display = "none";
-        document.getElementById("activar").style.display = "none"
+        document.getElementById("activar").style.display = "none";
         contador=0;
         backarriba();
 
@@ -85,7 +86,7 @@ function inicio() {
         document.getElementById("screen1").style.display = "block";
         document.getElementById("side").style.display = "none";
         document.getElementById("recarga").style.display = "none";
-        document.getElementById("activar").style.display = "none"
+        document.getElementById("activar").style.display = "none";
         conta=0;
         contador=0;
         coden=0;
@@ -98,7 +99,7 @@ function inicio() {
         document.getElementById("screen1").style.display = "none";
         document.getElementById("side").style.display = "none";
         document.getElementById("recarga").style.display = "none";
-        document.getElementById("activar").style.display = "none"
+        document.getElementById("activar").style.display = "none";
         conta=0;
         contador=1;
         coden=1;
@@ -134,6 +135,19 @@ function recarga() {
 }
 
 
+function admin() {
+    document.getElementById("screen4").style.display = "block";
+    document.getElementById("recarga").style.display = "none";
+    document.getElementById("activar").style.display = "none";
+    document.getElementById("informacion").style.display = "none";	
+    document.getElementById("screen1").style.display = "none";
+    document.getElementById("side").style.display = "none";
+    conta=0;
+    contador=1;
+    ids1();
+}
+
+
 
 var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
@@ -144,7 +158,8 @@ function portafolio() {
     document.getElementById("screen1").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("recarga").style.display = "none";
-    document.getElementById("activar").style.display = "none"
+    document.getElementById("activar").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
     document.getElementById("informacion").style.display = "none";
     conta=1;
     backweb();
@@ -184,51 +199,52 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
     });
 
 
-// formulario
+
+
+
+// Administrador
+
+// Calcula el alto de la página
+var pageHeight = document.body.scrollHeight;
+
+// Calcula el 5% del alto de la página
+var offset = pageHeight * 0.55;
+
+// Calcula la posición en la que se quiere mover el scroll
+var targetPosition = pageHeight - offset;
 
 document.querySelector("#submit").addEventListener("click", e => {
     e.preventDefault();
-  
-    //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
-    let telefono = "593995468983";
-  
-    let cliente = document.querySelector("#cliente").value;
-    let contacto = document.querySelector("#contacto").value;
-    let fecha = document.querySelector("#fecha").value;
-    let venta = document.querySelector("#venta").value;
-    let cantidad = document.querySelector("#cantidad").value;
-    let productos = document.querySelector("#productos").value;
+
+    let clave = document.querySelector("#clave").value;
     let resp = document.querySelector("#respuesta");
   
+    let url = "https://peajespichincha.ec/pages/inic/sgk_login_C.aspx"
+
+
+    if (clave === "010232" ) {
     resp.classList.remove("fail");
     resp.classList.remove("send");
-  
-    let url = `https://api.whatsapp.com/send?phone=593995468983&text=
-          *UNIVERSAL TAG*%0A
-          *Solicitud del Tag*%0A
-          *Nombre del Cliente*%0A
-          ${cliente}%0A
-          *Numero de Contacto*%0A
-          ${contacto}%0A
-          *Fecha*%0A
-          ${fecha}%0A
-          *Tipo de Solicitud*%0A
-          ${venta}%0A
-          *Placas del Vehículo*%0A
-          ${cantidad}%0A
-          *Número de Cedula*%0A
-          ${productos}%0A`;
-  
-    if (cliente === "" || contacto === "" || fecha === ""|| venta === "" || cantidad === "" ) {
-      resp.classList.add("fail");
-      resp.innerHTML = `Espera, ${cliente} faltan algunos Datos `;
-      return false;
+    resp.innerHTML = `Clave, Aprovada`;
+    document.getElementById("admiok").style.display = "none";
+    document.getElementById("contenedor").style.maxWidth = "1000px";
+    document.getElementById("linkok").style.display = "block";
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }else if (clave === ""){
+     resp.classList.add("fail");
+    resp.classList.remove("send");
+    resp.innerHTML = `Tu Clave, ${clave} es Incorrecta `;
+    return false;   
+    }else {
+        resp.classList.add("fail");
+        resp.classList.remove("send");
+        resp.innerHTML = `Tu Clave, ${clave} es Incorrecta `;
+        return false;  
     }
-    resp.classList.remove("fail");
-    resp.classList.add("send");
-    resp.innerHTML = `Tu Solicitud Fue Enviada, ${cliente}`;
-  
-    window.open(url);
+
   });
   
 
@@ -347,8 +363,7 @@ const shareData2 = {
     }
     } 
     
-    
-    
+
     document.addEventListener('DOMContentLoaded', sms);
 
     function sms (){
@@ -362,6 +377,8 @@ const shareData2 = {
           })
     
     };
+
+    
     
       
 

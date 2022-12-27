@@ -510,6 +510,8 @@ footer .rango {
 	  }
   }
 
+  
+
   @media screen  and  (min-width: 1400px){
 	.back { 
 	  right: 28%;
@@ -576,13 +578,37 @@ footer .rango {
   }
 
 
-  /* screen 4 Formulario */
+  /* admin */
 
 .screen4 {
 	text-align: center;
 	display: none;
 
 }
+
+.screen4  .ratras {
+	text-decoration: none;
+	display:inline-block;
+	background: linear-gradient(102deg, #0998f7 40%, #0867ff8f 60%);
+	color: #ffffff;
+	margin: 15px 15%;
+	padding: 5px 25px;
+    border-radius:5px ;
+	font-size: 12px;
+	box-shadow: 1px 1px 5px #020000c4;
+	
+}
+
+.screen4  .ratras:hover{
+	background: #ffffff;
+	color: #115ae2;
+
+}
+
+.screen4 .linkok{
+	display: none;
+}
+
 
   .formulario {
 	max-width: 100%;
