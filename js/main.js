@@ -204,35 +204,20 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
 
 // Administrador
 
-// Calcula el alto de la página
-var pageHeight = document.body.scrollHeight;
-
-// Calcula el 5% del alto de la página
-var offset = pageHeight * 0.55;
-
-// Calcula la posición en la que se quiere mover el scroll
-var targetPosition = pageHeight - offset;
-
 document.querySelector("#submit").addEventListener("click", e => {
     e.preventDefault();
 
     let clave = document.querySelector("#clave").value;
     let resp = document.querySelector("#respuesta");
   
-    let url = "https://peajespichincha.ec/pages/inic/sgk_login_C.aspx"
+    let url = "https://peajespichincha.ec/pages/proc/sgk_p_soli_enro_tag.aspx"
 
 
     if (clave === "010232" ) {
     resp.classList.remove("fail");
     resp.classList.remove("send");
     resp.innerHTML = `Clave, Aprovada`;
-    document.getElementById("admiok").style.display = "none";
-    document.getElementById("contenedor").style.maxWidth = "1000px";
-    document.getElementById("linkok").style.display = "block";
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+    window.location.href = url;
     }else if (clave === ""){
      resp.classList.add("fail");
     resp.classList.remove("send");
