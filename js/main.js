@@ -349,20 +349,6 @@ const shareData2 = {
     } 
     
 
-    document.addEventListener('DOMContentLoaded', sms);
-
-    function sms (){
-        Swal.fire({
-            position: 'bottom',
-            icon: 'warning',
-            title: 'Advertencia',
-            text: 'Las Activaciones y Homologaciones son Gratuitas en los Puntos Y Páginas Autorizadas, no Realices Trámites en la Calle ni Recargas.',
-            showCloseButton: 'true',
-          footer: 'ECUA-LABELS'
-          })
-    
-    };
-
     
     
       
