@@ -328,7 +328,7 @@ function pdf(){
 
 const shareData2 = {
     title: 'Universal Tag',
-    text: 'Enviado desde Cliconline App. Web Tarjeta Digital Ecua Labels Universal Tag',
+    text: 'Webmaster Ecua Labels Universal Tag',
     url: 'https://ecualabelstag.blogspot.com',
     }
     
